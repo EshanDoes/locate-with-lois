@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dffpcbtlggmwg"]
+
+[ext_resource type="Shader" uid="uid://d0536yv3qi8xq" path="res://shaders/transparencydither.gdshader" id="1_pkk3e"]
+
+[resource]
+shader = ExtResource("1_pkk3e")
+shader_parameter/intensity = 0.0

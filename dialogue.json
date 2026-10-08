@@ -1,0 +1,53 @@
+[
+	{
+		"npc": "Eshan",
+		"dialogue": [
+			{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "who are you?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "I'm Eshan"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "why are you talking in uppercase?"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "we don't do that here."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "Well, I do!"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "you're generally just going against the style of this game."
+			},{
+				"npcTalking": false,
+				"expression": "unnessecarilly angry",
+				"dialogue": "that's making me unnessecarilly angry."
+			},{
+				"npcTalking": true,
+				"expression": "squished",
+				"dialogue": "Yeah that's kinda the name of the expression you're using"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "I guess I'll have to end the dialouge now so I can get away"
+			}
+		]
+	},{
+		"npc": "Eshan",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "This is just more test dialogue that doesn't actually do anything"
+			}
+		]
+	}
+]

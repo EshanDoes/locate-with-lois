@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://32448hnp3s50"]
+
+[ext_resource type="Script" uid="uid://dn28cvkmwvkw6" path="res://scripts/global.gd" id="1_nmxvb"]
+[ext_resource type="Shader" uid="uid://d0536yv3qi8xq" path="res://shaders/transparencydither.gdshader" id="2_m3l3d"]
+[ext_resource type="Script" uid="uid://8imm1qjn4rdj" path="res://scripts/dialogue.gd" id="2_nmxvb"]
+[ext_resource type="Material" uid="uid://dffpcbtlggmwg" path="res://shaders/dialoguedither.tres" id="4_6rlim"]
+[ext_resource type="Texture2D" uid="uid://dljk6eriky0pa" path="res://sprites/textbox.png" id="4_m3l3d"]
+[ext_resource type="Texture2D" uid="uid://c4f7plw32mvcm" path="res://sprites/expressions/Eshan/neutral.png" id="4_mmyj5"]
+[ext_resource type="FontFile" uid="uid://1j23vnh848yf" path="res://Abaddon Bold.ttf" id="5_nelfd"]
+[ext_resource type="Texture2D" uid="uid://n8pjwlro6u71" path="res://sprites/expressions/Lois/neutral.png" id="5_unqd7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nkf8p"]
+shader = ExtResource("2_m3l3d")
+shader_parameter/intensity = 0.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_6rlim"]
+font = ExtResource("5_nelfd")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+stacked_shadow_count = 4
+stacked_shadow_0/color = Color(1, 1, 1, 1)
+stacked_shadow_1/offset = Vector2(1, -1)
+stacked_shadow_1/color = Color(1, 1, 1, 1)
+stacked_shadow_2/offset = Vector2(-1, 1)
+stacked_shadow_2/color = Color(1, 1, 1, 1)
+stacked_shadow_3/offset = Vector2(-1, -1)
+stacked_shadow_3/color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_a7kyx"]
+font = ExtResource("5_nelfd")
+
+[node name="Global" type="Control" unique_id=1873292144]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nmxvb")
+
+[node name="Overlay" type="CanvasLayer" parent="." unique_id=1432956083]
+layer = 5
+
+[node name="Screen Size" type="ReferenceRect" parent="Overlay" unique_id=202330168]
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="Dialogue" type="Control" parent="Overlay" unique_id=732805643]
+texture_filter = 1
+material = SubResource("ShaderMaterial_nkf8p")
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_nmxvb")
+animationDuration = 0.35
+animationPosition = 20.0
+
+[node name="NPC Expression" type="TextureRect" parent="Overlay/Dialogue" unique_id=1982911946]
+material = ExtResource("4_6rlim")
+layout_mode = 0
+offset_left = 40.0
+offset_right = 230.0
+offset_bottom = 240.0
+texture = ExtResource("4_mmyj5")
+
+[node name="Lois Expression" type="TextureRect" parent="Overlay/Dialogue" unique_id=1708089630]
+material = ExtResource("4_6rlim")
+layout_mode = 0
+offset_left = 410.0
+offset_right = 600.0
+offset_bottom = 240.0
+texture = ExtResource("5_unqd7")
+
+[node name="Dialogue Box" type="TextureRect" parent="Overlay/Dialogue" unique_id=1629390754]
+material = ExtResource("4_6rlim")
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_m3l3d")
+
+[node name="Name" type="Label" parent="Overlay/Dialogue" unique_id=2128726084]
+material = ExtResource("4_6rlim")
+layout_mode = 0
+offset_left = 68.0
+offset_top = 232.0
+offset_right = 136.0
+offset_bottom = 268.0
+text = "Name"
+label_settings = SubResource("LabelSettings_6rlim")
+
+[node name="Dialogue" type="Label" parent="Overlay/Dialogue" unique_id=1057306103]
+material = ExtResource("4_6rlim")
+layout_mode = 0
+offset_left = 68.0
+offset_top = 260.0
+offset_right = 578.0
+offset_bottom = 283.0
+text = "Temps "
+label_settings = SubResource("LabelSettings_a7kyx")
+autowrap_mode = 2
