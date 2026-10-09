@@ -4,8 +4,8 @@ var initialMousePos = Vector2(0, 0)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _input(event):
-	if Input.is_action_just_pressed("middle_click"):
+	if Input.is_action_just_pressed("drag_camera"):
 		initialMousePos = event.position
-	elif Input.is_action_pressed("middle_click") and !Global.isDialogue:
+	elif Input.is_action_pressed("drag_camera") and !Global.isDialogue:
 		position += initialMousePos - event.position
 		initialMousePos = event.position

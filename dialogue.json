@@ -41,12 +41,36 @@
 			}
 		]
 	},{
-		"npc": "Eshan",
+		"npc": "Gary",
 		"dialogue": [
 			{
 				"npcTalking": true,
 				"expression": "neutral",
-				"dialogue": "This is just more test dialogue that doesn't actually do anything"
+				"dialogue": "i'm gary."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "who are you?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "gary."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "oh yeah, you just said that earlier."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "yeah."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "because i'm gary."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "your sprite sucks."
 			}
 		]
 	}
