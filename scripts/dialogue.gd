@@ -57,7 +57,9 @@ func get_dialogue(index):
 	npcTalkedTo = dialogue[index]["npc"]
 	currentDialogue = dialogue[index]["dialogue"]
 	if dialogue[index].has("propertyChange"):
-			Global.set(dialogue[index]["propertyChange"]["name"], dialogue[index]["propertyChange"]["value"])
+		Global.set(dialogue[index]["propertyChange"]["name"], dialogue[index]["propertyChange"]["value"])
+	npcExpression.texture = load("res://sprites/expressions/"+npcTalkedTo+"/neutral.png")
+	loisExpression.texture = load("res://sprites/expressions/Lois/neutral.png")
 	next_dialogue()
 	
 	var ditherTween = get_tree().create_tween()
