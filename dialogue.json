@@ -46,31 +46,72 @@
 			{
 				"npcTalking": true,
 				"expression": "neutral",
-				"dialogue": "i'm gary."
-			},{
-				"npcTalking": false,
-				"expression": "neutral",
-				"dialogue": "who are you?"
+				"dialogue": "oh, howdy, stranger!"
 			},{
 				"npcTalking": true,
 				"expression": "neutral",
-				"dialogue": "gary."
-			},{
-				"npcTalking": false,
-				"expression": "neutral",
-				"dialogue": "oh yeah, you just said that earlier."
+				"dialogue": "nice day for workin', ain't it?"
 			},{
 				"npcTalking": true,
 				"expression": "neutral",
-				"dialogue": "yeah."
+				"dialogue": "too bad the weedwhacker's broke..."
 			},{
 				"npcTalking": true,
 				"expression": "neutral",
-				"dialogue": "because i'm gary."
+				"dialogue": "i can't find them darn replacement blades anywhere!"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "hey, if ya see 'em around, bring 'em here, see?"
 			},{
 				"npcTalking": false,
 				"expression": "neutral",
-				"dialogue": "your sprite sucks."
+				"dialogue": "i'll keep an eye out."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "by the way, you wouldn't happen to have seen my sweater button around, would you?"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "this is my favourite sweater..."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "sweater button? hmm, can't say i've seen it."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "tell ya what, you keep an eye out for them weedwhacker blades, an' i'll keep a lookout for your button!"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "thanks, dude."
+			}
+		],
+		"propertyChange": {
+			"name": "pathToFlashlight",
+			"value": 1
+		}
+	},{
+		"npc": "Gary",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "found anythin' yet?"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "nope. you found any buttons?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "i didn't, but i'll keep lookin'."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "thanks, i'll be on the lookout for the blades."
 			}
 		]
 	}

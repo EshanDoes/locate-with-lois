@@ -56,6 +56,8 @@ func get_dialogue(index):
 	dialogueNow = -1
 	npcTalkedTo = dialogue[index]["npc"]
 	currentDialogue = dialogue[index]["dialogue"]
+	if dialogue[index].has("propertyChange"):
+			Global.set(dialogue[index]["propertyChange"]["name"], dialogue[index]["propertyChange"]["value"])
 	next_dialogue()
 	
 	var ditherTween = get_tree().create_tween()
