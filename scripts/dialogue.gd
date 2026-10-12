@@ -1,4 +1,6 @@
-extends Node
+extends UIOverlay
+
+signal dialogue_closed
 
 var dialogueJSON = "res://dialogue.json"
 @onready var dialogueBox = $"Dialogue Box"
@@ -6,8 +8,6 @@ var dialogueJSON = "res://dialogue.json"
 @onready var nameText = $Name
 @onready var npcExpression = $"NPC Expression"
 @onready var loisExpression = $"Lois Expression"
-@export var animationDuration = 0.2
-@export var animationPosition = 10.0
 @export var dialogueSpeed = 30.0
 
 var dialogue
@@ -53,6 +53,7 @@ func _process(delta: float) -> void:
 			untilNextChar = 0.0
 
 func get_dialogue(index):
+	self.visible = true
 	dialogueNow = -1
 	npcTalkedTo = dialogue[index]["npc"]
 	currentDialogue = dialogue[index]["dialogue"]
@@ -62,12 +63,7 @@ func get_dialogue(index):
 	loisExpression.texture = load("res://sprites/expressions/Lois/neutral.png")
 	next_dialogue()
 	
-	var ditherTween = get_tree().create_tween()
-	var moveTween = get_tree().create_tween()
-	var opacityTween = get_tree().create_tween()
-	ditherTween.tween_property(dialogueBox, "material:shader_parameter/intensity", 0.0, animationDuration)
-	moveTween.tween_property(self, "position:y", 0, animationDuration).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CIRC)
-	opacityTween.tween_property(self, "modulate:a", 1, animationDuration).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CIRC)
+	open()
 
 func next_dialogue():
 	dialogueNow += 1
@@ -90,15 +86,8 @@ func next_dialogue():
 			nameText.text = "Lois"
 			loisExpression.texture = load("res://sprites/expressions/Lois/"+currentDialogue[dialogueNow]["expression"]+".png")
 	else:
-		var ditherTween = get_tree().create_tween()
-		var moveTween = get_tree().create_tween()
-		var opacityTween = get_tree().create_tween()
-		ditherTween.tween_property(dialogueBox, "material:shader_parameter/intensity", 1.0, animationDuration)
-		moveTween.tween_property(self, "position:y", animationPosition, animationDuration).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CIRC)
-		opacityTween.tween_property(self, "modulate:a", 0, animationDuration).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CIRC)
-		
-		await get_tree().create_timer(animationDuration).timeout
-		Global.close_dialogue()
+		close()
+		dialogue_closed.emit()
 
 func expression_priority_animation(talkingCharacter, otherCharacter, expressionAnimationDuration = animationDuration):
 	var talkingCharacterModulateTween = get_tree().create_tween()
@@ -112,5 +101,5 @@ func expression_priority_animation(talkingCharacter, otherCharacter, expressionA
 	otherCharacterPositionTween.tween_property(otherCharacter, "position:y", 16, expressionAnimationDuration).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CIRC)
 
 func _input(event):
-	if event.is_action_pressed("progress_dialogue") and Global.isDialogue:
+	if event.is_action_pressed("progress_dialogue") and !Global.canInteract and self.visible:
 		next_dialogue()

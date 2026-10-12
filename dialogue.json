@@ -45,15 +45,15 @@
 		"dialogue": [
 			{
 				"npcTalking": true,
-				"expression": "neutral",
+				"expression": "smirk",
 				"dialogue": "oh, howdy, stranger!"
 			},{
 				"npcTalking": true,
-				"expression": "neutral",
+				"expression": "smirk",
 				"dialogue": "nice day for workin', ain't it?"
 			},{
 				"npcTalking": true,
-				"expression": "neutral",
+				"expression": "dissapointed",
 				"dialogue": "too bad the weedwhacker's broke..."
 			},{
 				"npcTalking": true,
@@ -69,11 +69,11 @@
 				"dialogue": "i'll keep an eye out."
 			},{
 				"npcTalking": false,
-				"expression": "neutral",
+				"expression": "curious",
 				"dialogue": "by the way, you wouldn't happen to have seen my sweater button around, would you?"
 			},{
 				"npcTalking": false,
-				"expression": "neutral",
+				"expression": "worried",
 				"dialogue": "this is my favourite sweater..."
 			},{
 				"npcTalking": true,
@@ -81,7 +81,7 @@
 				"dialogue": "sweater button? hmm, can't say i've seen it."
 			},{
 				"npcTalking": true,
-				"expression": "neutral",
+				"expression": "smirk",
 				"dialogue": "tell ya what, you keep an eye out for them weedwhacker blades, an' i'll keep a lookout for your button!"
 			},{
 				"npcTalking": false,
@@ -106,12 +106,96 @@
 				"dialogue": "nope. you found any buttons?"
 			},{
 				"npcTalking": true,
-				"expression": "neutral",
+				"expression": "smirk",
 				"dialogue": "i didn't, but i'll keep lookin'."
 			},{
 				"npcTalking": false,
 				"expression": "neutral",
 				"dialogue": "thanks, i'll be on the lookout for the blades."
+			}
+		]
+	},{
+		"npc": "Gary",
+		"dialogue": [
+			{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "hey, i found your weedwhacker blades!"
+			},{
+				"npcTalking": true,
+				"expression": "smirk",
+				"dialogue": "hey, thanks for lookin' for those!"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "hold on, i gotta repay you somehow."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "here, take these clippers. it's not much, but it's at least somethin'."
+			}
+		],
+		"propertyChange": {
+			"name": "pathToFlashlight",
+			"value": 3
+		}
+	},{
+		"npc": "Gary",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "how's the clippers?"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "they're very clippy."
+			}
+		]
+	},{
+		"npc": "Gary",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral"
+			}
+		]
+	},{
+		"npc": "None",
+		"dialogue": [
+			{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "oh hey, i think i found a bag of..."
+			},{
+				"npcTalking": false,
+				"expression": "curious",
+				"dialogue": "uh, what is this?"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "oh, it's just weedwhacker blades. thought it was something else."
+			}
+		],
+		"propertyChange": {
+			"name": "pathToFlashlight",
+			"value": 2
+		}
+	},{
+		"npc": "None",
+		"dialogue": [
+			{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "looks like there's a sign with directions."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "it says the garden is south, the caves are east, the woods are west, and there's rosebushes north."
+			},{
+				"npcTalking": false,
+				"expression": "curious",
+				"dialogue": "i have no idea why they put four locations onto two arrow signs, though. maybe the points were made by accident?"
 			}
 		]
 	}

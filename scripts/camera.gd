@@ -6,6 +6,6 @@ var initialMousePos = Vector2(0, 0)
 func _input(event):
 	if Input.is_action_just_pressed("drag_camera"):
 		initialMousePos = event.position
-	elif Input.is_action_pressed("drag_camera") and !Global.isDialogue:
+	elif Input.is_action_pressed("drag_camera") and Global.canInteract:
 		position += initialMousePos - event.position
 		initialMousePos = event.position

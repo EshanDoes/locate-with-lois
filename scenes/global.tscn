@@ -1,17 +1,12 @@
 [gd_scene format=3 uid="uid://32448hnp3s50"]
 
 [ext_resource type="Script" uid="uid://dn28cvkmwvkw6" path="res://scripts/global.gd" id="1_nmxvb"]
-[ext_resource type="Shader" uid="uid://d0536yv3qi8xq" path="res://shaders/transparencydither.gdshader" id="2_m3l3d"]
 [ext_resource type="Script" uid="uid://8imm1qjn4rdj" path="res://scripts/dialogue.gd" id="2_nmxvb"]
-[ext_resource type="Material" uid="uid://dffpcbtlggmwg" path="res://shaders/dialoguedither.tres" id="4_6rlim"]
+[ext_resource type="Material" uid="uid://dffpcbtlggmwg" path="res://shaders/overlaydither.tres" id="4_6rlim"]
 [ext_resource type="Texture2D" uid="uid://dljk6eriky0pa" path="res://sprites/textbox.png" id="4_m3l3d"]
 [ext_resource type="Texture2D" uid="uid://c4f7plw32mvcm" path="res://sprites/expressions/Eshan/neutral.png" id="4_mmyj5"]
 [ext_resource type="FontFile" uid="uid://1j23vnh848yf" path="res://Abaddon Bold.ttf" id="5_nelfd"]
 [ext_resource type="Texture2D" uid="uid://n8pjwlro6u71" path="res://sprites/expressions/Lois/neutral.png" id="5_unqd7"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_nkf8p"]
-shader = ExtResource("2_m3l3d")
-shader_parameter/intensity = 0.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_6rlim"]
 font = ExtResource("5_nelfd")
@@ -44,14 +39,12 @@ offset_bottom = 360.0
 
 [node name="Dialogue" type="Control" parent="Overlay" unique_id=732805643]
 texture_filter = 1
-material = SubResource("ShaderMaterial_nkf8p")
+material = ExtResource("4_6rlim")
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_nmxvb")
-animationDuration = 0.35
-animationPosition = 20.0
 
 [node name="NPC Expression" type="TextureRect" parent="Overlay/Dialogue" unique_id=1982911946]
 material = ExtResource("4_6rlim")

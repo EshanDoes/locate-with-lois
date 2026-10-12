@@ -1,6 +1,6 @@
 extends Node
 
-var isDialogue = false
+var canInteract = true
 @onready var overlay = $Overlay
 @onready var dialogue = $Overlay/Dialogue
 
@@ -17,12 +17,13 @@ func _enter_tree() -> void:
 
 func _ready():
 	overlay.visible = false
+	dialogue.visible = false
 
 func open_dialogue(index):
-	isDialogue = true
+	canInteract = false
 	overlay.visible = true
 	dialogue.get_dialogue(index)
 
-func close_dialogue():
-	isDialogue = false
+func renew_interact():
+	canInteract = true
 	overlay.visible = false
