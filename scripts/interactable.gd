@@ -5,6 +5,8 @@ class_name Interactable
 @export var questTiedTo = ""
 @export var dissapearAfterInteract = false
 
+var hoverShader = load("res://shaders/interactablehover.gdshader")
+
 func _ready():
 	self.gui_input.connect(_on_gui_input)
 	self.connect("mouse_entered", _on_mouse_entered)
@@ -34,7 +36,7 @@ func _hide_self():
 		self.visible = false
 
 func _on_mouse_entered():
-	print("Entered")
+	material.shader = hoverShader
 
 func _on_mouse_exited():
-	print("Exited")
+	material.shader = load("res://shaders/transparencydither.gdshader")

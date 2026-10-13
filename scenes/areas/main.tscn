@@ -9,11 +9,19 @@
 [ext_resource type="Texture2D" uid="uid://bk73uhsp7psgc" path="res://sprites/area/crossroads/vert-off.png" id="4_gb7al"]
 [ext_resource type="Script" uid="uid://bwoxstj8q4a3b" path="res://scripts/interactable.gd" id="5_gb7al"]
 [ext_resource type="Texture2D" uid="uid://dn50rprdp77vp" path="res://sprites/objects/weedwhacker.png" id="9_gj8ku"]
+[ext_resource type="Shader" uid="uid://deywmxjgkbnra" path="res://shaders/interactablehover.gdshader" id="9_irocd"]
 [ext_resource type="Texture2D" uid="uid://2ouu6w7bt4ss" path="res://sprites/characters/gary.png" id="10_2pufu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2pufu"]
 shader = ExtResource("3_68ama")
 shader_parameter/intensity = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0xqg1"]
+shader = ExtResource("9_irocd")
+shader_parameter/size = 4.0
+shader_parameter/color1 = Color(1, 1, 1, 1)
+shader_parameter/color2 = Color(0.7, 0.7, 0.7, 1)
+shader_parameter/scrollSpeed = Vector2(0.2, -0.1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1n03n"]
 shader = ExtResource("3_68ama")
@@ -83,6 +91,7 @@ script = ExtResource("5_gb7al")
 dialogueIndex = 7
 
 [node name="Weedwhacker" type="TextureRect" parent="." unique_id=1624504344]
+material = SubResource("ShaderMaterial_0xqg1")
 layout_mode = 0
 offset_left = 204.0
 offset_top = -625.0
