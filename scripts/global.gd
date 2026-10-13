@@ -16,6 +16,7 @@ func _enter_tree() -> void:
 	pass
 
 func _ready():
+	Input.set_custom_mouse_cursor(load("res://sprites/cursor/pointer.png"), Input.CURSOR_POINTING_HAND)
 	overlay.visible = false
 	dialogue.visible = false
 
