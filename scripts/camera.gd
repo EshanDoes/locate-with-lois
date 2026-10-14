@@ -9,3 +9,6 @@ func _input(event):
 	elif Input.is_action_pressed("drag_camera") and Global.canInteract:
 		position += initialMousePos - event.position
 		initialMousePos = event.position
+
+func _ready():
+	position = Vector2(0, 0)

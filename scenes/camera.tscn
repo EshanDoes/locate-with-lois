@@ -13,3 +13,9 @@ script = ExtResource("1_cvpoc")
 [node name="Notebook Button" type="TextureRect" parent="." unique_id=267626335]
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=758830965]
+offset_left = -320.0
+offset_top = -189.0
+offset_right = 320.0
+offset_bottom = 171.0

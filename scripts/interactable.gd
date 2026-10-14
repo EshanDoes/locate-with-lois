@@ -2,7 +2,7 @@ extends Control
 class_name Interactable
 
 @export var dialogueIndex = 0
-@export var questTiedTo = ""
+@export var questTiedTo: String = ""
 @export var dissapearAfterInteract = false
 
 var hoverShader = load("res://shaders/interactablehover.gdshader")
@@ -19,12 +19,7 @@ func _ready():
 
 func _on_gui_input(event: InputEvent):
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MouseButton.MOUSE_BUTTON_LEFT:
-		var indexSent = dialogueIndex
-		if questTiedTo != "":
-			indexSent += Global.get(questTiedTo)
-		Global.open_dialogue(indexSent)
-		if dissapearAfterInteract:
-			Global.get_node("Overlay/Dialogue").connect("dialogue_closed", _hide_self)
+		on_click()
 
 func _hide_self():
 	if self.material != null:
@@ -40,3 +35,14 @@ func _on_mouse_entered():
 
 func _on_mouse_exited():
 	material.shader = load("res://shaders/transparencydither.gdshader")
+
+func on_click():
+	open_dialogue(Global.get(questTiedTo))
+
+func open_dialogue(extraIncrease = 0):
+	var indexSent = dialogueIndex
+	if questTiedTo != "":
+		indexSent += extraIncrease
+	Global.open_dialogue(indexSent)
+	if dissapearAfterInteract:
+		Global.get_node("Overlay/Dialogue").connect("dialogue_closed", _hide_self)

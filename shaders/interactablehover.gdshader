@@ -7,7 +7,7 @@ uniform vec2 scrollSpeed = vec2(5, 5);
 
 void fragment() {
 	vec4 pixelColor = texture(TEXTURE, UV);
-	if(pixelColor.g == 1.0){
+	if(pixelColor == vec4(1, 1, 1, 1)){
 		vec2 pos = floor(FRAGCOORD.xy / size + scrollSpeed * TIME);
 		float pattern_mask = mod(pos.x + mod(pos.y, 2.0), 2.0);
 		COLOR = mix(color1, color2, pattern_mask);

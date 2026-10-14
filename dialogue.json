@@ -156,8 +156,9 @@
 		"npc": "Gary",
 		"dialogue": [
 			{
-				"npcTalking": true,
-				"expression": "neutral"
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "i used the clippers to find a flashlight, gary."
 			}
 		]
 	},{
@@ -196,6 +197,15 @@
 				"npcTalking": false,
 				"expression": "curious",
 				"dialogue": "i've always wondered who decided to put four locations onto two arrow signs, though. maybe the points were made by accident?"
+			}
+		]
+	},{
+		"npc": "None",
+		"dialogue": [
+			{
+				"npcTalking": false,
+				"expression": "worried",
+				"dialogue": "that cave is looking very dark. i don't think i'd like to go inside."
 			}
 		]
 	}
