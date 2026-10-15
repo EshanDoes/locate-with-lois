@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cf75crkg1k0vn" path="res://icon.svg" id="1_cha8l"]
 [ext_resource type="Script" uid="uid://bwoxstj8q4a3b" path="res://scripts/interactable.gd" id="2_jgj1h"]
 [ext_resource type="Texture2D" uid="uid://dn50rprdp77vp" path="res://sprites/objects/weedwhacker.png" id="3_8tpi7"]
-[ext_resource type="Texture2D" uid="uid://bljxccmfw2itj" path="res://sprites/directions.png" id="5_mulem"]
+[ext_resource type="Texture2D" uid="uid://bljxccmfw2itj" path="res://sprites/objects/directions.png" id="5_mulem"]
 [ext_resource type="PackedScene" uid="uid://scq32cydqhnu" path="res://scenes/camera.tscn" id="6_mulem"]
 [ext_resource type="Script" uid="uid://bgkp5sqpv3s62" path="res://scripts/roomdoor.gd" id="7_gjncc"]
 [ext_resource type="PackedScene" uid="uid://0o2orom7thau" path="res://scenes/areas/main.tscn" id="8_bktew"]
@@ -12,6 +12,8 @@
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
+
+[node name="Camera" parent="." unique_id=683167166 instance=ExtResource("6_mulem")]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=357580552]
 layout_mode = 0
@@ -53,8 +55,6 @@ offset_bottom = 62.0
 texture = ExtResource("5_mulem")
 script = ExtResource("2_jgj1h")
 dialogueIndex = 7
-
-[node name="Camera" parent="." unique_id=683167166 instance=ExtResource("6_mulem")]
 
 [node name="TextureRect5" type="TextureRect" parent="." unique_id=703669447]
 layout_mode = 0

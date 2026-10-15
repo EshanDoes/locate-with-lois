@@ -11,4 +11,5 @@ func _input(event):
 		initialMousePos = event.position
 
 func _ready():
-	position = Vector2(0, 0)
+	if Global.pathToFlashlight < 4:
+		position = Vector2(0, 0)

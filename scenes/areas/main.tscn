@@ -3,16 +3,29 @@
 [ext_resource type="PackedScene" uid="uid://scq32cydqhnu" path="res://scenes/camera.tscn" id="1_poq41"]
 [ext_resource type="Texture2D" uid="uid://h26xtbuyt37a" path="res://sprites/area/locations/start.png" id="2_las2c"]
 [ext_resource type="Shader" uid="uid://d0536yv3qi8xq" path="res://shaders/transparencydither.gdshader" id="3_68ama"]
-[ext_resource type="Texture2D" uid="uid://dkxmvt31jepuj" path="res://sprites/area/paths/vertical.png" id="3_f5g1q"]
-[ext_resource type="Texture2D" uid="uid://yj7miux2wl7p" path="res://sprites/area/paths/horizontal.png" id="4_1n03n"]
-[ext_resource type="Texture2D" uid="uid://bljxccmfw2itj" path="res://sprites/directions.png" id="4_f5g1q"]
-[ext_resource type="Texture2D" uid="uid://bk73uhsp7psgc" path="res://sprites/area/crossroads/vert-off.png" id="4_gb7al"]
+[ext_resource type="Texture2D" uid="uid://dkxmvt31jepuj" path="res://sprites/area/paths/straight/vertical.png" id="3_f5g1q"]
+[ext_resource type="Texture2D" uid="uid://yj7miux2wl7p" path="res://sprites/area/paths/straight/horizontal.png" id="4_1n03n"]
+[ext_resource type="Texture2D" uid="uid://bljxccmfw2itj" path="res://sprites/objects/directions.png" id="4_f5g1q"]
+[ext_resource type="Texture2D" uid="uid://bk73uhsp7psgc" path="res://sprites/area/paths/crossroads/vert-off.png" id="4_gb7al"]
+[ext_resource type="Texture2D" uid="uid://f1r8c03oiekn" path="res://sprites/area/paths/turn.png" id="5_emjqg"]
 [ext_resource type="Script" uid="uid://bwoxstj8q4a3b" path="res://scripts/interactable.gd" id="5_gb7al"]
-[ext_resource type="Texture2D" uid="uid://b0kli3olfmhoc" path="res://sprites/grass.png" id="6_irocd"]
+[ext_resource type="Texture2D" uid="uid://b0kli3olfmhoc" path="res://sprites/area/decorations/grass.png" id="6_irocd"]
 [ext_resource type="Texture2D" uid="uid://bg7xs3v7nyiec" path="res://sprites/area/locations/garden.png" id="7_it57t"]
+[ext_resource type="Texture2D" uid="uid://2r0rsvgyspku" path="res://sprites/area/locations/forest.png" id="8_ku2cx"]
+[ext_resource type="Texture2D" uid="uid://dptgv6cjtyaf3" path="res://sprites/area/decorations/tree.png" id="9_aclf8"]
 [ext_resource type="Texture2D" uid="uid://dn50rprdp77vp" path="res://sprites/objects/weedwhacker.png" id="9_gj8ku"]
+[ext_resource type="Texture2D" uid="uid://b2vcy8hlwt21m" path="res://sprites/area/locations/treasure.png" id="9_mt2t3"]
+[ext_resource type="Texture2D" uid="uid://d4dlw3trjsl06" path="res://sprites/area/locations/cave_entrance.png" id="9_vppnd"]
 [ext_resource type="Texture2D" uid="uid://2ouu6w7bt4ss" path="res://sprites/characters/gary.png" id="10_2pufu"]
+[ext_resource type="Texture2D" uid="uid://uk3a25pwp8ro" path="res://sprites/area/decorations/single_spike.png" id="13_fsf1c"]
 [ext_resource type="Texture2D" uid="uid://ddc1ox1gaom5w" path="res://sprites/characters/flora.png" id="13_ku2cx"]
+[ext_resource type="Texture2D" uid="uid://cl8kpv7s5ttrc" path="res://sprites/area/decorations/double_spike.png" id="14_tgpmh"]
+[ext_resource type="Texture2D" uid="uid://rowv6eus3bd1" path="res://sprites/objects/apple.png" id="15_j81cs"]
+[ext_resource type="Texture2D" uid="uid://psgxwqhw7bs1" path="res://sprites/characters/chase.png" id="16_d44ak"]
+[ext_resource type="Texture2D" uid="uid://ba4m02wt3585k" path="res://sprites/area/cave_entrance.png" id="16_dw5qf"]
+[ext_resource type="Script" uid="uid://bgkp5sqpv3s62" path="res://scripts/roomdoor.gd" id="18_vppnd"]
+[ext_resource type="PackedScene" uid="uid://bq0bn38i7nt0o" path="res://scenes/areas/cave.tscn" id="19_dw5qf"]
+[ext_resource type="Texture2D" uid="uid://csvjxg4wndmbj" path="res://sprites/characters/splash.png" id="24_7mbfx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2pufu"]
 shader = ExtResource("3_68ama")
@@ -25,14 +38,11 @@ shader_parameter/intensity = 0.0
 [node name="World" type="Control" unique_id=674932283]
 texture_filter = 1
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 
 [node name="Camera" parent="." unique_id=683167166 instance=ExtResource("1_poq41")]
-position = Vector2(662, -34)
+position = Vector2(674, -121)
+limit_left = -1280
 limit_top = -860
 
 [node name="Map" type="Control" parent="." unique_id=2098410681]
@@ -48,7 +58,7 @@ offset_right = 320.0
 offset_bottom = 180.0
 texture = ExtResource("2_las2c")
 
-[node name="Up Path 1" type="TextureRect" parent="Map" unique_id=1138791252]
+[node name="Roses Path" type="TextureRect" parent="Map" unique_id=1138791252]
 layout_mode = 0
 offset_left = -53.0
 offset_top = -380.0
@@ -57,11 +67,20 @@ offset_bottom = -180.0
 texture = ExtResource("3_f5g1q")
 stretch_mode = 1
 
-[node name="Up Path 2" type="TextureRect" parent="Map" unique_id=207646953]
+[node name="Garden Path" type="TextureRect" parent="Map" unique_id=207646953]
 layout_mode = 0
 offset_left = -53.0
 offset_top = 180.0
 offset_right = 47.0
+offset_bottom = 280.0
+texture = ExtResource("3_f5g1q")
+stretch_mode = 1
+
+[node name="Forest to Treasure Path" type="TextureRect" parent="Map" unique_id=1007341361]
+layout_mode = 0
+offset_left = -992.0
+offset_top = 94.0
+offset_right = -892.0
 offset_bottom = 280.0
 texture = ExtResource("3_f5g1q")
 stretch_mode = 1
@@ -75,7 +94,25 @@ offset_bottom = 30.0
 texture = ExtResource("4_1n03n")
 stretch_mode = 1
 
-[node name="Up Split 1" type="TextureRect" parent="Map" unique_id=197000641]
+[node name="Garden to Forest Path" type="TextureRect" parent="Map" unique_id=191807237]
+layout_mode = 0
+offset_left = -630.0
+offset_top = 440.0
+offset_right = -330.0
+offset_bottom = 540.0
+texture = ExtResource("4_1n03n")
+stretch_mode = 1
+
+[node name="Splash Path" type="TextureRect" parent="Map" unique_id=1450469276]
+layout_mode = 0
+offset_left = -630.0
+offset_top = -70.0
+offset_right = -320.0
+offset_bottom = 30.0
+texture = ExtResource("4_1n03n")
+stretch_mode = 1
+
+[node name="Roses Split" type="TextureRect" parent="Map" unique_id=197000641]
 layout_mode = 0
 offset_left = -51.0
 offset_top = -480.0
@@ -83,6 +120,46 @@ offset_right = 49.0
 offset_bottom = -380.0
 texture = ExtResource("4_gb7al")
 flip_h = true
+
+[node name="Cave Turn" type="TextureRect" parent="Map" unique_id=1434426432]
+layout_mode = 0
+offset_left = 620.0
+offset_top = -70.0
+offset_right = 720.0
+offset_bottom = 30.0
+texture = ExtResource("5_emjqg")
+
+[node name="Garden" type="TextureRect" parent="Map" unique_id=1953735198]
+layout_mode = 0
+offset_left = -330.0
+offset_top = 280.0
+offset_right = 310.0
+offset_bottom = 640.0
+texture = ExtResource("7_it57t")
+
+[node name="Forest" type="TextureRect" parent="Map" unique_id=1576725541]
+layout_mode = 0
+offset_left = -1270.0
+offset_top = 280.0
+offset_right = -630.0
+offset_bottom = 640.0
+texture = ExtResource("8_ku2cx")
+
+[node name="Treasure" type="TextureRect" parent="Map" unique_id=1910561740]
+layout_mode = 0
+offset_left = -1270.0
+offset_top = -230.0
+offset_right = -630.0
+offset_bottom = 130.0
+texture = ExtResource("9_mt2t3")
+
+[node name="Cave" type="TextureRect" parent="Map" unique_id=1349119907]
+layout_mode = 0
+offset_left = 353.0
+offset_top = -430.0
+offset_right = 993.0
+offset_bottom = -70.0
+texture = ExtResource("9_vppnd")
 
 [node name="Grass 1" type="TextureRect" parent="Map" unique_id=928623139]
 layout_mode = 0
@@ -116,21 +193,125 @@ offset_right = -152.0
 offset_bottom = -127.0
 texture = ExtResource("6_irocd")
 
-[node name="Garden" type="TextureRect" parent="Map" unique_id=1953735198]
+[node name="Grass 5" type="TextureRect" parent="Map" unique_id=1554467152]
 layout_mode = 0
-offset_left = -330.0
-offset_top = 280.0
-offset_right = 310.0
-offset_bottom = 640.0
-texture = ExtResource("7_it57t")
+offset_left = 69.0
+offset_top = 220.0
+offset_right = 129.0
+offset_bottom = 280.0
+texture = ExtResource("6_irocd")
+
+[node name="Grass 6" type="TextureRect" parent="Map" unique_id=1960567865]
+layout_mode = 0
+offset_left = -396.0
+offset_top = 267.0
+offset_right = -336.0
+offset_bottom = 327.0
+texture = ExtResource("6_irocd")
+
+[node name="Grass 7" type="TextureRect" parent="Map" unique_id=19891506]
+layout_mode = 0
+offset_left = -355.0
+offset_top = 234.0
+offset_right = -295.0
+offset_bottom = 294.0
+texture = ExtResource("6_irocd")
+
+[node name="Tree 1" type="TextureRect" parent="Map" unique_id=444564323]
+layout_mode = 0
+offset_left = -1240.0
+offset_top = 281.0
+offset_right = -1040.0
+offset_bottom = 581.0
+texture = ExtResource("9_aclf8")
+
+[node name="Tree 2" type="TextureRect" parent="Map" unique_id=1355506746]
+layout_mode = 0
+offset_left = -1048.0
+offset_top = 292.0
+offset_right = -848.0
+offset_bottom = 592.0
+texture = ExtResource("9_aclf8")
+
+[node name="Tree 3" type="TextureRect" parent="Map" unique_id=1062328104]
+layout_mode = 0
+offset_left = -1217.0
+offset_top = 1.0
+offset_right = -1017.0
+offset_bottom = 301.0
+texture = ExtResource("9_aclf8")
+
+[node name="Tree 4" type="TextureRect" parent="Map" unique_id=1978330536]
+layout_mode = 0
+offset_left = -1345.0
+offset_top = 25.0
+offset_right = -1145.0
+offset_bottom = 325.0
+texture = ExtResource("9_aclf8")
+
+[node name="Tree 5" type="TextureRect" parent="Map" unique_id=1027931308]
+layout_mode = 0
+offset_left = -661.0
+offset_top = 42.0
+offset_right = -461.0
+offset_bottom = 342.0
+texture = ExtResource("9_aclf8")
+
+[node name="Tree 6" type="TextureRect" parent="Map" unique_id=1094770073]
+layout_mode = 0
+offset_left = -620.0
+offset_top = -356.0
+offset_right = -420.0
+offset_bottom = -56.0
+texture = ExtResource("9_aclf8")
+
+[node name="Single Spike 1" type="TextureRect" parent="Map" unique_id=700183069]
+layout_mode = 0
+offset_left = 712.0
+offset_top = -189.0
+offset_right = 912.0
+offset_bottom = 111.0
+texture = ExtResource("13_fsf1c")
+
+[node name="Single Spike 3" type="TextureRect" parent="Map" unique_id=1556044309]
+layout_mode = 0
+offset_left = 612.0
+offset_top = 80.0
+offset_right = 812.0
+offset_bottom = 380.0
+texture = ExtResource("13_fsf1c")
+
+[node name="Single Spike 2" type="TextureRect" parent="Map" unique_id=222582648]
+layout_mode = 0
+offset_left = 812.0
+offset_top = -378.0
+offset_right = 1012.0
+offset_bottom = -78.0
+texture = ExtResource("13_fsf1c")
+
+[node name="Double Spike 1" type="TextureRect" parent="Map" unique_id=1844114213]
+layout_mode = 0
+offset_left = 300.0
+offset_top = -379.0
+offset_right = 500.0
+offset_bottom = -79.0
+texture = ExtResource("14_tgpmh")
+
+[node name="Double Spike 2" type="TextureRect" parent="Map" unique_id=1622892395]
+layout_mode = 0
+offset_left = 722.0
+offset_top = 637.0
+offset_right = 922.0
+offset_bottom = 937.0
+texture = ExtResource("14_tgpmh")
 
 [node name="Directions Sign" type="TextureRect" parent="." unique_id=852597548]
 material = SubResource("ShaderMaterial_2pufu")
 layout_mode = 0
-offset_left = 141.0
-offset_top = 29.0
-offset_right = 281.0
-offset_bottom = 169.0
+offset_left = 64.0
+offset_top = 31.0
+offset_right = 204.0
+offset_bottom = 171.0
 mouse_default_cursor_shape = 2
 texture = ExtResource("4_f5g1q")
 script = ExtResource("5_gb7al")
@@ -146,6 +327,30 @@ mouse_default_cursor_shape = 2
 texture = ExtResource("9_gj8ku")
 script = ExtResource("5_gb7al")
 dialogueIndex = 6
+dissapearAfterInteract = true
+
+[node name="Cave Entrance" type="TextureRect" parent="." unique_id=727353181]
+layout_mode = 0
+offset_left = 615.0
+offset_top = -308.0
+offset_right = 740.0
+offset_bottom = -143.0
+texture = ExtResource("16_dw5qf")
+script = ExtResource("18_vppnd")
+room = ExtResource("19_dw5qf")
+questMinimumToEnter = 4
+dialogueIndex = 8
+questTiedTo = "pathToFlashlight"
+
+[node name="Apple" type="TextureRect" parent="." unique_id=1159059395]
+layout_mode = 0
+offset_left = -908.0
+offset_top = 474.0
+offset_right = -848.0
+offset_bottom = 534.0
+mouse_default_cursor_shape = 2
+texture = ExtResource("15_j81cs")
+script = ExtResource("5_gb7al")
 dissapearAfterInteract = true
 
 [node name="Gary" type="TextureRect" parent="." unique_id=2010812412]
@@ -168,4 +373,22 @@ offset_top = 366.0
 offset_right = -22.0
 offset_bottom = 486.0
 texture = ExtResource("13_ku2cx")
+script = ExtResource("5_gb7al")
+
+[node name="Chase" type="TextureRect" parent="." unique_id=1390539438]
+layout_mode = 0
+offset_left = -1113.0
+offset_top = 441.0
+offset_right = -993.0
+offset_bottom = 561.0
+texture = ExtResource("16_d44ak")
+script = ExtResource("5_gb7al")
+
+[node name="Splash" type="TextureRect" parent="." unique_id=1492073955]
+layout_mode = 0
+offset_left = -1035.0
+offset_top = -138.0
+offset_right = -915.0
+offset_bottom = -18.0
+texture = ExtResource("24_7mbfx")
 script = ExtResource("5_gb7al")

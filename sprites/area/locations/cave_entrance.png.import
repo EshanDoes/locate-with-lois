@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkxmvt31jepuj"
-path="res://.godot/imported/vertical.png-77584329a66e9a213be3cbbaeb2e7d44.ctex"
+uid="uid://d4dlw3trjsl06"
+path="res://.godot/imported/cave_entrance.png-bd995a8f5b238ed322e1c51b90d5b2b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/area/paths/vertical.png"
-dest_files=["res://.godot/imported/vertical.png-77584329a66e9a213be3cbbaeb2e7d44.ctex"]
+source_file="res://sprites/area/locations/cave_entrance.png"
+dest_files=["res://.godot/imported/cave_entrance.png-bd995a8f5b238ed322e1c51b90d5b2b8.ctex"]
 
 [params]
 

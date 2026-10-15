@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk73uhsp7psgc"
-path="res://.godot/imported/vert-off.png-eeddde1548e5d0128a20fa26b531a6f1.ctex"
+uid="uid://bljxccmfw2itj"
+path="res://.godot/imported/directions.png-5b1afd7fb2bcac526be95ffa0d11b8ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/area/crossroads/vert-off.png"
-dest_files=["res://.godot/imported/vert-off.png-eeddde1548e5d0128a20fa26b531a6f1.ctex"]
+source_file="res://sprites/objects/directions.png"
+dest_files=["res://.godot/imported/directions.png-5b1afd7fb2bcac526be95ffa0d11b8ad.ctex"]
 
 [params]
 

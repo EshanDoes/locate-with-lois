@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkjmgawi1wj52"
-path="res://.godot/imported/horz-off.png-05b99ee9652d4e9431e88083ff1dd46a.ctex"
+uid="uid://bk73uhsp7psgc"
+path="res://.godot/imported/vert-off.png-6fbf8f7ea5e46388752b8298074231da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/area/crossroads/horz-off.png"
-dest_files=["res://.godot/imported/horz-off.png-05b99ee9652d4e9431e88083ff1dd46a.ctex"]
+source_file="res://sprites/area/paths/crossroads/vert-off.png"
+dest_files=["res://.godot/imported/vert-off.png-6fbf8f7ea5e46388752b8298074231da.ctex"]
 
 [params]
 

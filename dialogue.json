@@ -149,16 +149,44 @@
 			},{
 				"npcTalking": false,
 				"expression": "neutral",
-				"dialogue": "they're very clippy."
+				"dialogue": "i don't really know what to do with them, but i still appreciate the gift."
+			},{
+				"npcTalking": true,
+				"expression": "smirk",
+				"dialogue": "maybe if i find somethin' else, i could repay you with a better item."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "no no, it's alright."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "if you say so."
+			},{
+				"npcTalking": true,
+				"expression": "smirk",
+				"dialogue": "maybe you could try and cut some of the plants nearby, though. that could help you find what you're looking for!"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "thanks, i'll keep it in mind."
 			}
 		]
 	},{
 		"npc": "Gary",
 		"dialogue": [
 			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "how's the clippers?"
+			},{
 				"npcTalking": false,
 				"expression": "neutral",
-				"dialogue": "i used the clippers to find a flashlight, gary."
+				"dialogue": "i actually managed to use them to find a flashlight!"
+			},{
+				"npcTalking": true,
+				"expression": "smirk",
+				"dialogue": "glad you managed to at least do somethin' with those."
 			}
 		]
 	},{
