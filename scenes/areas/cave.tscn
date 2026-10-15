@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://scq32cydqhnu" path="res://scenes/camera.tscn" id="1_v61y4"]
 
 [node name="World" type="Control" unique_id=546284535]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

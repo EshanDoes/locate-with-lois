@@ -8,8 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://bljxccmfw2itj" path="res://sprites/directions.png" id="4_f5g1q"]
 [ext_resource type="Texture2D" uid="uid://bk73uhsp7psgc" path="res://sprites/area/crossroads/vert-off.png" id="4_gb7al"]
 [ext_resource type="Script" uid="uid://bwoxstj8q4a3b" path="res://scripts/interactable.gd" id="5_gb7al"]
+[ext_resource type="Texture2D" uid="uid://b0kli3olfmhoc" path="res://sprites/grass.png" id="6_irocd"]
+[ext_resource type="Texture2D" uid="uid://bg7xs3v7nyiec" path="res://sprites/area/locations/garden.png" id="7_it57t"]
 [ext_resource type="Texture2D" uid="uid://dn50rprdp77vp" path="res://sprites/objects/weedwhacker.png" id="9_gj8ku"]
 [ext_resource type="Texture2D" uid="uid://2ouu6w7bt4ss" path="res://sprites/characters/gary.png" id="10_2pufu"]
+[ext_resource type="Texture2D" uid="uid://ddc1ox1gaom5w" path="res://sprites/characters/flora.png" id="13_ku2cx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2pufu"]
 shader = ExtResource("3_68ama")
@@ -54,6 +57,15 @@ offset_bottom = -180.0
 texture = ExtResource("3_f5g1q")
 stretch_mode = 1
 
+[node name="Up Path 2" type="TextureRect" parent="Map" unique_id=207646953]
+layout_mode = 0
+offset_left = -53.0
+offset_top = 180.0
+offset_right = 47.0
+offset_bottom = 280.0
+texture = ExtResource("3_f5g1q")
+stretch_mode = 1
+
 [node name="Cave Path" type="TextureRect" parent="Map" unique_id=1155798980]
 layout_mode = 0
 offset_left = 320.0
@@ -71,6 +83,46 @@ offset_right = 49.0
 offset_bottom = -380.0
 texture = ExtResource("4_gb7al")
 flip_h = true
+
+[node name="Grass 1" type="TextureRect" parent="Map" unique_id=928623139]
+layout_mode = 0
+offset_left = -161.0
+offset_top = 83.0
+offset_right = -101.0
+offset_bottom = 143.0
+texture = ExtResource("6_irocd")
+
+[node name="Grass 2" type="TextureRect" parent="Map" unique_id=2096469699]
+layout_mode = 0
+offset_left = -225.0
+offset_top = -215.0
+offset_right = -165.0
+offset_bottom = -155.0
+texture = ExtResource("6_irocd")
+
+[node name="Grass 3" type="TextureRect" parent="Map" unique_id=122698606]
+layout_mode = 0
+offset_left = -160.0
+offset_top = -206.0
+offset_right = -100.0
+offset_bottom = -146.0
+texture = ExtResource("6_irocd")
+
+[node name="Grass 4" type="TextureRect" parent="Map" unique_id=1146866954]
+layout_mode = 0
+offset_left = -212.0
+offset_top = -187.0
+offset_right = -152.0
+offset_bottom = -127.0
+texture = ExtResource("6_irocd")
+
+[node name="Garden" type="TextureRect" parent="Map" unique_id=1953735198]
+layout_mode = 0
+offset_left = -330.0
+offset_top = 280.0
+offset_right = 310.0
+offset_bottom = 640.0
+texture = ExtResource("7_it57t")
 
 [node name="Directions Sign" type="TextureRect" parent="." unique_id=852597548]
 material = SubResource("ShaderMaterial_2pufu")
@@ -108,3 +160,12 @@ texture = ExtResource("10_2pufu")
 script = ExtResource("5_gb7al")
 dialogueIndex = 1
 questTiedTo = "pathToFlashlight"
+
+[node name="Flora" type="TextureRect" parent="." unique_id=2033167280]
+layout_mode = 0
+offset_left = -142.0
+offset_top = 366.0
+offset_right = -22.0
+offset_bottom = 486.0
+texture = ExtResource("13_ku2cx")
+script = ExtResource("5_gb7al")
