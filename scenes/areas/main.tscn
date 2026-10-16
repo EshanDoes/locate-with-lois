@@ -22,8 +22,10 @@
 [ext_resource type="Texture2D" uid="uid://ce0qn3pug3f5k" path="res://sprites/area/locations/bushes.png" id="11_bn0lc"]
 [ext_resource type="Texture2D" uid="uid://uk3a25pwp8ro" path="res://sprites/area/decorations/single_spike.png" id="13_fsf1c"]
 [ext_resource type="Texture2D" uid="uid://ddc1ox1gaom5w" path="res://sprites/characters/flora.png" id="13_ku2cx"]
+[ext_resource type="Material" uid="uid://ccjipo6dnga6i" path="res://shaders/grasssway.tres" id="14_ihbhu"]
 [ext_resource type="Texture2D" uid="uid://cl8kpv7s5ttrc" path="res://sprites/area/decorations/double_spike.png" id="14_tgpmh"]
 [ext_resource type="Texture2D" uid="uid://rowv6eus3bd1" path="res://sprites/objects/apple.png" id="15_j81cs"]
+[ext_resource type="Material" uid="uid://c05ishkwv5a74" path="res://shaders/treesway.tres" id="16_6ri3l"]
 [ext_resource type="Texture2D" uid="uid://psgxwqhw7bs1" path="res://sprites/characters/chase.png" id="16_d44ak"]
 [ext_resource type="Texture2D" uid="uid://ba4m02wt3585k" path="res://sprites/area/cave_entrance.png" id="16_dw5qf"]
 [ext_resource type="Script" uid="uid://bgkp5sqpv3s62" path="res://scripts/roomdoor.gd" id="18_vppnd"]
@@ -201,6 +203,7 @@ offset_bottom = -70.0
 texture = ExtResource("9_vppnd")
 
 [node name="Grass 1" type="TextureRect" parent="Map" unique_id=928623139]
+material = ExtResource("14_ihbhu")
 layout_mode = 0
 offset_left = -161.0
 offset_top = 83.0
@@ -209,6 +212,7 @@ offset_bottom = 143.0
 texture = ExtResource("6_irocd")
 
 [node name="Grass 2" type="TextureRect" parent="Map" unique_id=2096469699]
+material = ExtResource("14_ihbhu")
 layout_mode = 0
 offset_left = -225.0
 offset_top = -215.0
@@ -217,6 +221,7 @@ offset_bottom = -155.0
 texture = ExtResource("6_irocd")
 
 [node name="Grass 3" type="TextureRect" parent="Map" unique_id=122698606]
+material = ExtResource("14_ihbhu")
 layout_mode = 0
 offset_left = -160.0
 offset_top = -206.0
@@ -225,6 +230,7 @@ offset_bottom = -146.0
 texture = ExtResource("6_irocd")
 
 [node name="Grass 4" type="TextureRect" parent="Map" unique_id=1146866954]
+material = ExtResource("14_ihbhu")
 layout_mode = 0
 offset_left = -212.0
 offset_top = -187.0
@@ -233,6 +239,7 @@ offset_bottom = -127.0
 texture = ExtResource("6_irocd")
 
 [node name="Grass 5" type="TextureRect" parent="Map" unique_id=1554467152]
+material = ExtResource("14_ihbhu")
 layout_mode = 0
 offset_left = 69.0
 offset_top = 220.0
@@ -241,6 +248,7 @@ offset_bottom = 280.0
 texture = ExtResource("6_irocd")
 
 [node name="Grass 6" type="TextureRect" parent="Map" unique_id=1960567865]
+material = ExtResource("14_ihbhu")
 layout_mode = 0
 offset_left = -396.0
 offset_top = 267.0
@@ -249,6 +257,7 @@ offset_bottom = 327.0
 texture = ExtResource("6_irocd")
 
 [node name="Grass 7" type="TextureRect" parent="Map" unique_id=19891506]
+material = ExtResource("14_ihbhu")
 layout_mode = 0
 offset_left = -355.0
 offset_top = 234.0
@@ -257,6 +266,7 @@ offset_bottom = 294.0
 texture = ExtResource("6_irocd")
 
 [node name="Tree 1" type="TextureRect" parent="Map" unique_id=444564323]
+material = ExtResource("16_6ri3l")
 layout_mode = 0
 offset_left = -1240.0
 offset_top = 281.0
@@ -265,6 +275,7 @@ offset_bottom = 581.0
 texture = ExtResource("9_aclf8")
 
 [node name="Tree 2" type="TextureRect" parent="Map" unique_id=1355506746]
+material = ExtResource("16_6ri3l")
 layout_mode = 0
 offset_left = -1048.0
 offset_top = 292.0
@@ -273,6 +284,7 @@ offset_bottom = 592.0
 texture = ExtResource("9_aclf8")
 
 [node name="Tree 3" type="TextureRect" parent="Map" unique_id=1062328104]
+material = ExtResource("16_6ri3l")
 layout_mode = 0
 offset_left = -1217.0
 offset_top = 1.0
@@ -281,6 +293,7 @@ offset_bottom = 301.0
 texture = ExtResource("9_aclf8")
 
 [node name="Tree 4" type="TextureRect" parent="Map" unique_id=1978330536]
+material = ExtResource("16_6ri3l")
 layout_mode = 0
 offset_left = -1345.0
 offset_top = 25.0
@@ -289,6 +302,7 @@ offset_bottom = 325.0
 texture = ExtResource("9_aclf8")
 
 [node name="Tree 5" type="TextureRect" parent="Map" unique_id=1027931308]
+material = ExtResource("16_6ri3l")
 layout_mode = 0
 offset_left = -661.0
 offset_top = 42.0
@@ -297,6 +311,7 @@ offset_bottom = 342.0
 texture = ExtResource("9_aclf8")
 
 [node name="Tree 6" type="TextureRect" parent="Map" unique_id=1094770073]
+material = ExtResource("16_6ri3l")
 layout_mode = 0
 offset_left = -620.0
 offset_top = -356.0
@@ -305,6 +320,7 @@ offset_bottom = -56.0
 texture = ExtResource("9_aclf8")
 
 [node name="Tree 7" type="TextureRect" parent="Map" unique_id=919668593]
+material = ExtResource("16_6ri3l")
 layout_mode = 0
 offset_left = -1238.0
 offset_top = -505.0
@@ -313,30 +329,34 @@ offset_bottom = -205.0
 texture = ExtResource("9_aclf8")
 
 [node name="Tree 8" type="TextureRect" parent="Map" unique_id=1090827812]
+material = ExtResource("16_6ri3l")
 layout_mode = 0
-offset_left = -1093.0
-offset_top = -801.0
-offset_right = -893.0
-offset_bottom = -501.0
+offset_left = -964.0
+offset_top = -804.0
+offset_right = -764.0
+offset_bottom = -504.0
 texture = ExtResource("9_aclf8")
 
 [node name="Tree 9" type="TextureRect" parent="Map" unique_id=1812924721]
+material = ExtResource("16_6ri3l")
 layout_mode = 0
-offset_left = -922.0
-offset_top = -774.0
-offset_right = -722.0
-offset_bottom = -474.0
+offset_left = -793.0
+offset_top = -777.0
+offset_right = -593.0
+offset_bottom = -477.0
 texture = ExtResource("9_aclf8")
 
 [node name="Tree 10" type="TextureRect" parent="Map" unique_id=36416185]
+material = ExtResource("16_6ri3l")
 layout_mode = 0
-offset_left = -1013.0
-offset_top = -698.0
-offset_right = -813.0
-offset_bottom = -398.0
+offset_left = -884.0
+offset_top = -701.0
+offset_right = -684.0
+offset_bottom = -401.0
 texture = ExtResource("9_aclf8")
 
 [node name="Tree 11" type="TextureRect" parent="Map" unique_id=1011791150]
+material = ExtResource("16_6ri3l")
 layout_mode = 0
 offset_left = -612.0
 offset_top = 549.0
@@ -345,6 +365,7 @@ offset_bottom = 849.0
 texture = ExtResource("9_aclf8")
 
 [node name="Tree 12" type="TextureRect" parent="Map" unique_id=605576702]
+material = ExtResource("16_6ri3l")
 layout_mode = 0
 offset_left = -1253.0
 offset_top = 747.0
@@ -438,34 +459,38 @@ dialogueIndex = 7
 
 [node name="Weedwhacker" type="TextureRect" parent="." unique_id=1624504344]
 layout_mode = 0
-offset_left = -909.0
-offset_top = -432.0
-offset_right = -849.0
-offset_bottom = -372.0
+offset_left = -780.0
+offset_top = -435.0
+offset_right = -720.0
+offset_bottom = -375.0
 mouse_default_cursor_shape = 2
 texture = ExtResource("9_gj8ku")
 script = ExtResource("5_gb7al")
 dialogueIndex = 6
+questTiedTo = "pathToFlashlight"
 dissapearAfterInteract = true
+minimumQuestAmount = 2
 
 [node name="Flashlight" type="TextureRect" parent="." unique_id=42511419]
 layout_mode = 0
-offset_left = -1099.0
-offset_top = -631.0
-offset_right = -1039.0
-offset_bottom = -571.0
+offset_left = -970.0
+offset_top = -634.0
+offset_right = -910.0
+offset_bottom = -574.0
 mouse_default_cursor_shape = 2
 texture = ExtResource("19_37awi")
 script = ExtResource("5_gb7al")
 dialogueIndex = 11
+questTiedTo = "pathToFlashlight"
 dissapearAfterInteract = true
+minimumQuestAmount = 4
 
 [node name="Thorns" type="TextureRect" parent="." unique_id=785608386]
 layout_mode = 0
-offset_left = -1098.0
-offset_top = -635.0
-offset_right = -1038.0
-offset_bottom = -575.0
+offset_left = -969.0
+offset_top = -638.0
+offset_right = -909.0
+offset_bottom = -578.0
 mouse_default_cursor_shape = 2
 texture = ExtResource("20_dwwas")
 script = ExtResource("5_gb7al")
@@ -497,7 +522,9 @@ mouse_default_cursor_shape = 2
 texture = ExtResource("15_j81cs")
 script = ExtResource("5_gb7al")
 dialogueIndex = 16
+questTiedTo = "giveFruit"
 dissapearAfterInteract = true
+minimumQuestAmount = 2
 
 [node name="Gary" type="TextureRect" parent="." unique_id=2010812412]
 material = SubResource("ShaderMaterial_1n03n")

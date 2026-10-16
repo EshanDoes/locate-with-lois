@@ -367,7 +367,7 @@
 			},{
 				"npcTalking": true,
 				"expression": "neutral",
-				"dialogue": "me have apple now. grog repays you."
+				"dialogue": "grog have apple. grog repay you. grog give crystal."
 			},{
 				"npcTalking": false,
 				"expression": "neutral",
@@ -583,7 +583,7 @@
 		"dialogue": [
 			{
 				"npcTalking": true,
-				"expression": "neutral",
+				"expression": "down",
 				"dialogue": "... that darned dragon..."
 			},{
 				"npcTalking": false,
@@ -591,7 +591,7 @@
 				"dialogue": "huh? what about her?"
 			},{
 				"npcTalking": true,
-				"expression": "neutral",
+				"expression": "angy",
 				"dialogue": "i'll tell ya what! she took my favourite trophy and won't give it back!"
 			},{
 				"npcTalking": false,
@@ -607,7 +607,7 @@
 				"dialogue": "huh? sweater button? no idea."
 			},{
 				"npcTalking": true,
-				"expression": "neutral",
+				"expression": "down",
 				"dialogue": "i'll look around here. you go get my trophy back!"
 			},{
 				"npcTalking": false,
@@ -632,16 +632,16 @@
 				"dialogue": "nope. found a button?"
 			},{
 				"npcTalking": true,
-				"expression": "neutral",
+				"expression": "angy",
 				"dialogue": "i saw that dragon has a whole bunch of buttons! a slew of them!"
 			},{
 				"npcTalking": true,
-				"expression": "neutral",
+				"expression": "angy",
 				"dialogue": "she might have your button as well!"
 			},{
 				"npcTalking": false,
 				"expression": "neutral",
-				"dialogue": "i did see that as well, i'll keep it in mind though."
+				"dialogue": "i did see that as well, i'll keep it in mind."
 			}
 		]
 	},{
@@ -665,7 +665,7 @@
 				"dialogue": "yeah, that's all i had to really do."
 			},{
 				"npcTalking": true,
-				"expression": "neutral",
+				"expression": "down",
 				"dialogue": "dang, i could've been able to do that the entire time."
 			},{
 				"npcTalking": true,
@@ -673,7 +673,7 @@
 				"dialogue": "guess i gotta repay you now, though."
 			},{
 				"npcTalking": true,
-				"expression": "neutral",
+				"expression": "smile",
 				"dialogue": "don't think i found what you were looking for, but i found this watering can under a tree you might like."
 			},{
 				"npcTalking": false,
@@ -693,11 +693,11 @@
 		"dialogue": [
 			{
 				"npcTalking": true,
-				"expression": "neutral",
+				"expression": "smile",
 				"dialogue": "you know, i've treasured this trophy for a while."
 			},{
 				"npcTalking": true,
-				"expression": "neutral",
+				"expression": "smile",
 				"dialogue": "it's the first thing i've ever won, after i got first in a four legged race."
 			},{
 				"npcTalking": false,
@@ -705,7 +705,7 @@
 				"dialogue": "... i'm sorry, four legged race?"
 			},{
 				"npcTalking": true,
-				"expression": "neutral",
+				"expression": "smile",
 				"dialogue": "yeah, four legged race."
 			},{
 				"npcTalking": true,
@@ -713,7 +713,7 @@
 				"dialogue": "you know, where people go on all fours instead."
 			},{
 				"npcTalking": true,
-				"expression": "neutral",
+				"expression": "smile",
 				"dialogue": "makes you have to work on your arms and your legs."
 			},{
 				"npcTalking": false,

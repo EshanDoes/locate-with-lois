@@ -17,6 +17,10 @@ func _ready():
 	material = ShaderMaterial.new()
 	material.shader = load("res://shaders/transparencydither.gdshader")
 	material.set_shader_parameter("intensity", 0.0)
+	
+	if dissapearAfterInteract:
+		if Global.get(questTiedTo) >= minimumQuestAmount:
+			self.visible = false
 
 func _on_gui_input(event: InputEvent):
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MouseButton.MOUSE_BUTTON_LEFT:
@@ -45,10 +49,10 @@ func on_click():
 
 func open_dialogue(extraIncrease = 0):
 	var indexSent = dialogueIndex
-	if minimumQuestAmount != 0 and extraIncrease >= minimumQuestAmount:
+	if extraIncrease >= minimumQuestAmount and dialogueIndex == 9:
 		indexSent += 1
-	if extraIncrease != 0 and minimumQuestAmount == 0:
+	if extraIncrease != 0 and !dissapearAfterInteract:
 		indexSent += extraIncrease
 	Global.open_dialogue(indexSent)
-	if dissapearAfterInteract and extraIncrease >= minimumQuestAmount:
+	if dissapearAfterInteract and (extraIncrease >= minimumQuestAmount or dialogueIndex != 9):
 		Global.get_node("Overlay/Dialogue").connect("dialogue_closed", _hide_self)

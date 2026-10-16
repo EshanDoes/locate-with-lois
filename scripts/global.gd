@@ -26,7 +26,7 @@ func open_dialogue(index):
 	dialogue.get_dialogue(index)
 
 func renew_interact():
-	if giveFlower >= 2:
+	if giveFlower >= 3:
 		$"Overlay/Win Screen".open()
 	else:
 		canInteract = true
