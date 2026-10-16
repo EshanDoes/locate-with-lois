@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://bq0bn38i7nt0o"]
 
+[ext_resource type="Texture2D" uid="uid://cw46onwgpfmlm" path="res://sprites/area/locations/cave_inside.png" id="1_npl1g"]
 [ext_resource type="PackedScene" uid="uid://scq32cydqhnu" path="res://scenes/camera.tscn" id="1_v61y4"]
+[ext_resource type="Texture2D" uid="uid://c6tolqdychxlk" path="res://sprites/characters/grog.png" id="2_qgqxc"]
+[ext_resource type="Texture2D" uid="uid://ba4m02wt3585k" path="res://sprites/area/cave_entrance.png" id="2_uit5i"]
+[ext_resource type="Texture2D" uid="uid://uk3a25pwp8ro" path="res://sprites/area/decorations/single_spike.png" id="2_x15o6"]
+[ext_resource type="Script" uid="uid://bgkp5sqpv3s62" path="res://scripts/roomdoor.gd" id="3_npl1g"]
+[ext_resource type="Script" uid="uid://bwoxstj8q4a3b" path="res://scripts/interactable.gd" id="3_rphh8"]
+[ext_resource type="Texture2D" uid="uid://cl8kpv7s5ttrc" path="res://sprites/area/decorations/double_spike.png" id="3_tdxnn"]
 
 [node name="World" type="Control" unique_id=546284535]
 texture_filter = 1
@@ -11,4 +18,53 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Start" type="TextureRect" parent="." unique_id=550045162]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("1_npl1g")
+
+[node name="Single Spike 1" type="TextureRect" parent="Start" unique_id=1146419996]
+layout_mode = 0
+offset_left = 33.0
+offset_top = -22.0
+offset_right = 233.0
+offset_bottom = 278.0
+texture = ExtResource("2_x15o6")
+
+[node name="Double Spike 1" type="TextureRect" parent="Start" unique_id=915336178]
+layout_mode = 0
+offset_left = 409.0
+offset_top = 25.0
+offset_right = 609.0
+offset_bottom = 325.0
+texture = ExtResource("3_tdxnn")
+
 [node name="Camera" parent="." unique_id=683167166 instance=ExtResource("1_v61y4")]
+limit_left = 0
+limit_top = 0
+limit_right = 640
+limit_bottom = 360
+
+[node name="Cave Entrance" type="TextureRect" parent="." unique_id=812956787]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 5.0
+offset_right = 391.0
+offset_bottom = 170.0
+texture = ExtResource("2_uit5i")
+script = ExtResource("3_npl1g")
+roomPath = "uid://0o2orom7thau"
+dialogueIndex = 8
+questTiedTo = "pathToFlashlight"
+
+[node name="Grog" type="TextureRect" parent="." unique_id=85064338]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 197.0
+offset_right = 363.0
+offset_bottom = 317.0
+texture = ExtResource("2_qgqxc")
+script = ExtResource("3_rphh8")
+dialogueIndex = 12
+questTiedTo = "giveFruit"

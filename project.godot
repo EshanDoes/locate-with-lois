@@ -11,6 +11,8 @@ config_version=5
 [application]
 
 config/name="Locate with Lois"
+config/version="1.0.0"
+run/main_scene="uid://0o2orom7thau"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

@@ -9,6 +9,8 @@ func _ready() -> void:
 	self.visible = false
 
 func open():
+	self.visible = true
+	
 	var ditherTween = get_tree().create_tween()
 	var moveTween = get_tree().create_tween()
 	var opacityTween = get_tree().create_tween()

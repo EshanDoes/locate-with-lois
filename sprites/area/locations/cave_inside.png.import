@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://07hewpgw8p21"
-path="res://.godot/imported/concern.png-d7beb3e1e7bb5e498bf1b3aae49b3da5.ctex"
+uid="uid://cw46onwgpfmlm"
+path="res://.godot/imported/cave_inside.png-f1b15749c5e2ca769b6cee1008222d04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/expressions/Lois/concern.png"
-dest_files=["res://.godot/imported/concern.png-d7beb3e1e7bb5e498bf1b3aae49b3da5.ctex"]
+source_file="res://sprites/area/locations/cave_inside.png"
+dest_files=["res://.godot/imported/cave_inside.png-f1b15749c5e2ca769b6cee1008222d04.ctex"]
 
 [params]
 

@@ -4,6 +4,7 @@ class_name Interactable
 @export var dialogueIndex = 0
 @export var questTiedTo: String = ""
 @export var dissapearAfterInteract = false
+@export var minimumQuestAmount: int = 0
 
 var hoverShader = load("res://shaders/interactablehover.gdshader")
 
@@ -37,12 +38,17 @@ func _on_mouse_exited():
 	material.shader = load("res://shaders/transparencydither.gdshader")
 
 func on_click():
-	open_dialogue(Global.get(questTiedTo))
+	var extraIncrease = 0
+	if questTiedTo != "":
+		extraIncrease = Global.get(questTiedTo)
+	open_dialogue(extraIncrease)
 
 func open_dialogue(extraIncrease = 0):
 	var indexSent = dialogueIndex
-	if questTiedTo != "":
+	if minimumQuestAmount != 0 and extraIncrease >= minimumQuestAmount:
+		indexSent += 1
+	if extraIncrease != 0 and minimumQuestAmount == 0:
 		indexSent += extraIncrease
 	Global.open_dialogue(indexSent)
-	if dissapearAfterInteract:
+	if dissapearAfterInteract and extraIncrease >= minimumQuestAmount:
 		Global.get_node("Overlay/Dialogue").connect("dialogue_closed", _hide_self)

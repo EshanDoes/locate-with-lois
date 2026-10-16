@@ -1,12 +1,12 @@
 extends Interactable
 class_name RoomDoor
 
-@export var room: PackedScene
-@export var questMinimumToEnter = 0
+@export_file("*.tscn") var roomPath
 
 func on_click():
 	var questProgress = Global.get(questTiedTo)
-	if questProgress >= questMinimumToEnter:
-		Global.change_room(room)
+	if questProgress >= minimumQuestAmount:
+		var room = load(roomPath)
+		Global.change_room(room.instantiate())
 	else:
 		open_dialogue()

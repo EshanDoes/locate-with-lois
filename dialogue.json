@@ -89,10 +89,10 @@
 				"dialogue": "thanks, dude."
 			}
 		],
-		"propertyChange": {
+		"propertyChange": [{
 			"name": "pathToFlashlight",
 			"value": 1
-		}
+		}]
 	},{
 		"npc": "Gary",
 		"dialogue": [
@@ -135,10 +135,10 @@
 				"dialogue": "here, take these clippers. it's not much, but it's at least somethin'."
 			}
 		],
-		"propertyChange": {
+		"propertyChange": [{
 			"name": "pathToFlashlight",
 			"value": 3
-		}
+		}]
 	},{
 		"npc": "Gary",
 		"dialogue": [
@@ -206,10 +206,10 @@
 				"dialogue": "oh, it's just weedwhacker blades. thought it was something else."
 			}
 		],
-		"propertyChange": {
+		"propertyChange": [{
 			"name": "pathToFlashlight",
 			"value": 2
-		}
+		}]
 	},{
 		"npc": "None",
 		"dialogue": [
@@ -236,5 +236,740 @@
 				"dialogue": "that cave is looking very dark. i don't think i'd like to go inside."
 			}
 		]
+	},{
+		"npc": "None",
+		"dialogue": [
+			{
+				"npcTalking": false,
+				"expression": "curious",
+				"dialogue": "how did this ball of thorns get here? looks like it's covering something."
+			},{
+				"npcTalking": false,
+				"expression": "concerned",
+				"dialogue": "don't have anything to cut them with, either."
+			}
+		]
+	},{
+		"npc": "None",
+		"dialogue": [
+			{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "hmmmm, these thorns look like they could be cut somehow..."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "wait, i can use the clippers i got!"
+			}
+		]
+	},{
+		"npc": "None",
+		"dialogue": [
+			{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "oh look, a flashlight!"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "i think this would be useful for any dark places."
+			}
+		],
+		"propertyChange": [{
+			"name": "pathToFlashlight",
+			"value": 4
+		}]
+	},{
+		"npc": "Grog",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "nerd find grog."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "grog want fruit. far, in trees."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "from the woods? that sure is far, yeah."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "on yeah, have you seen my sweater button in here?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "button? grog not see button."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "grog have shiny. bring grog food, grog give shiny."
+			},{
+				"npcTalking": false,
+				"expression": "unamused",
+				"dialogue": "i don't know why i'd need that, but i guess i might as well."
+			}
+		],
+		"propertyChange": [{
+			"name": "giveFruit",
+			"value": 1
+		}]
+	},{
+		"npc": "Grog",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "nerd find grog."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "nerd find fruit?"
+			},{
+				"npcTalking": false,
+				"expression": "unamused",
+				"dialogue": "listen dude, why can't you go outside for food?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "me look at sun. sun too bright."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "me look at sun and say \"your too bright.\""
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "that no work."
+			},{
+				"npcTalking": false,
+				"expression": "unamused",
+				"dialogue": "..."
+			}
+		]
+	},{
+		"npc": "Grog",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "nerd find grog."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "nerd find fruit?"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "yeah, i found an apple for you."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "me have apple now. grog repays you."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "thanks for the crystal, then."
+			},{
+				"npcTalking": false,
+				"expression": "unamused",
+				"dialogue": "(i don't know why i chose to do this...)"
+			}
+		],
+		"propertyChange": [{
+			"name": "giveFruit",
+			"value": 3
+		},{
+			"name": "giveCrystal",
+			"value": 2
+		}]
+	},{
+		"npc": "Grog",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "nerd find grog."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "grog like food nerd give."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "apple taste better than shiny."
+			},{
+				"npcTalking": false,
+				"expression": "unamused",
+				"dialogue": "yeah, glad i could get you something to eat.."
+			},{
+				"npcTalking": false,
+				"expression": "concerned",
+				"dialogue": "(...)"
+			}
+		]
+	},{
+		"npc": "None",
+		"dialogue": [
+			{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "oh look, an apple!"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "i might as well pick it up, but i don't think i can eat it."
+			},{
+				"npcTalking": false,
+				"expression": "worried",
+				"dialogue": "i happen to be allergic to apples."
+			}
+		],
+		"propertyChange": [{
+			"name": "giveFruit",
+			"value": 2
+		}]
+	},{
+		"npc": "Splash",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "greetigns smol human."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "i found a shiny trophy. it's mine now."
+			},{
+				"npcTalking": false,
+				"expression": "unamused",
+				"dialogue": "that's... not how that works, but okay."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "hey, you wouldn't happen to have seen my sweater button lying around, would you?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "sweater button? i have lots of buttons."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "but i won't let you look at them unless you give me somethin' real shiny."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "alright, guess i'll have to look for something shiny."
+			}
+		],
+		"propertyChange": [{
+			"name": "giveCrystal",
+			"value": 1
+		}]
+	},{
+		"npc": "Splash",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "greetigns."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "you found a shiny?"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "i haven't found a shiny."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "find me the shiny, i want a shiny."
+			},{
+				"npcTalking": false,
+				"expression": "unamused",
+				"dialogue": "(i guess i need to keep looking for something shiny...)"
+			}
+		]
+	},{
+		"npc": "Splash",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "greetigns."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "whatcha got there?"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "a shiny crystal. looks like something you might want."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "ooohhh, shiny."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "gimme. this is better than some dumb trophy."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "you can take it. i don't want it anymore."
+			},{
+				"npcTalking": false,
+				"expression": "unamused",
+				"dialogue": "... and the button collection?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "you can look through that, doesn't matter to me."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "this is way more shiny than buttons."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "alright, let's see here..."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "nope, nothing that matches my sweater. i'll have to keep looking."
+			}
+		],
+		"propertyChange": [{
+			"name": "giveCrystal",
+			"value": 3
+		},{
+			"name": "giveTrophy",
+			"value": 2
+		}]
+	},{
+		"npc": "Splash",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "mmmm, yummy shiny."
+			},{
+				"npcTalking": false,
+				"expression": "curious",
+				"dialogue": "... did you say yummy?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "yeah, i like eating crystals. especially shiny ones."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "if it's shiny but not crystal though, i don't eat it."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "i only like how crystals taste. way better than things like apples."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "suit yourself, then."
+			}
+		]
+	},{
+		"npc": "Chase",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "... that darned dragon..."
+			},{
+				"npcTalking": false,
+				"expression": "curious",
+				"dialogue": "huh? what about her?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "i'll tell ya what! she took my favourite trophy and won't give it back!"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "darn, that stinks. i'll see if i can get it back, then."
+			},{
+				"npcTalking": false,
+				"expression": "curious",
+				"dialogue": "by the way, have you seen my sweater button around?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "huh? sweater button? no idea."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "i'll look around here. you go get my trophy back!"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "alright, see ya."
+			}
+		],
+		"propertyChange": [{
+			"name": "giveTrophy",
+			"value": 1
+		}]
+	},{
+		"npc": "Chase",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "hey, you got my trophy back yet?"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "nope. found a button?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "i saw that dragon has a whole bunch of buttons! a slew of them!"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "she might have your button as well!"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "i did see that as well, i'll keep it in mind though."
+			}
+		]
+	},{
+		"npc": "Chase",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "hey, you got my trophy back yet?"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "yeah, turns out i just had to give the dragon a shiny crystal."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "... that's it? that's all you had to do?"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "yeah, that's all i had to really do."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "dang, i could've been able to do that the entire time."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "guess i gotta repay you now, though."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "don't think i found what you were looking for, but i found this watering can under a tree you might like."
+			},{
+				"npcTalking": false,
+				"expression": "unamused",
+				"dialogue": "(what is up with these people and giving me random items?)"
+			}
+		],
+		"propertyChange": [{
+			"name": "giveTrophy",
+			"value": 3
+		},{
+			"name": "giveWateringCan",
+			"value": 2
+		}]
+	},{
+		"npc": "Chase",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "you know, i've treasured this trophy for a while."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "it's the first thing i've ever won, after i got first in a four legged race."
+			},{
+				"npcTalking": false,
+				"expression": "curious",
+				"dialogue": "... i'm sorry, four legged race?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "yeah, four legged race."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "you know, where people go on all fours instead."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "makes you have to work on your arms and your legs."
+			},{
+				"npcTalking": false,
+				"expression": "curious",
+				"dialogue": "?????"
+			}
+		]
+	},{
+		"npc": "Flora",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "oh, look at these flowers! so beautiful!"
+			},{
+				"npcTalking": false,
+				"expression": "concerned",
+				"dialogue": "they, uh, look like they need water."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "oh, but the problem is, i've lost my watering can!"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "but don't worry! i'm learning how to do a rain dance to get water instead!"
+			},{
+				"npcTalking": false,
+				"expression": "unamused",
+				"dialogue": "(i think i'm gonna need to find her a watering can for her own sanity.)"
+			}
+		],
+		"propertyChange": [{
+			"name": "giveWateringCan",
+			"value": 1
+		}]
+	},{
+		"npc": "Flora",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "oh, how i miss my watering can..."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "but rain dancing is so fun, whether or not it brings rain!"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "listen, i'm gonna find your watering can, you don't need to overexert yourself."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "oh, don't worry, i'm not pushing myself at all!"
+			},{
+				"npcTalking": false,
+				"expression": "concerned",
+				"dialogue": "you're covered in sweat."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "oh, i think those are actually droplets!"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "that must mean the rain is going to come!"
+			}
+		]
+	},{
+		"npc": "Flora",
+		"dialogue": [
+			{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "okay, look, i got this watering can for you, you can have it."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "oh finally, a very convenient way to bring water to plants!"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "... oh wait, there isn't any water in here."
+			},{
+				"npcTalking": false,
+				"expression": "unamused",
+				"dialogue": "(don't tell me i'll have to get the water for her...)"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "oh, i just wasn't looking inside! turns out it was completely full!"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "here, take this flower as a gift of friendship!"
+			}
+		],
+		"propertyChange": [{
+			"name": "giveWateringCan",
+			"value": 3
+		},{
+			"name": "giveFlower",
+			"value": 2
+		}]
+	},{
+		"npc": "Flora",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "i love watering with a watering can!"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "it gives so much water to the plants!"
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "... i just realized, i don't think those are flowers."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "they look more like... big, lettuce things."
+			},{
+				"npcTalking": true,
+				"expression": "concerned",
+				"dialogue": "anything can be a flower if you believe hard enough!"
+			}
+		]
+	},{
+		"npc": "Reginald",
+		"dialogue": [
+			{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "oh, woe is me, my flower has wilted..."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "now, i wear it atop my head..."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "hey, something up?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "my iconic flower has lot its spark, and so have i..."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "i now sit here, wondering what i shall do..."
+			},{
+				"npcTalking": false,
+				"expression": "concerned",
+				"dialogue": "hey, don't worry, i'll get a flower for you, alright?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "do not pity me, dear stranger. i am already drowning in a sea of tears, no way to float up..."
+			}
+		],
+		"propertyChange": [{
+			"name": "giveFlower",
+			"value": 1
+		}]
+	},{
+		"npc": "Reginald",
+		"dialogue": [
+			{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "hey, listen, your wordplay is pretty cool."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "you sound like you could be a poet."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "oh, without this flower, i am not recognized as who i was..."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "\"reginald damarti, famous poet and occasional actor, known for the flower he wears atop his head.\""
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "oh, how things used to be..."
+			},{
+				"npcTalking": false,
+				"expression": "concerned",
+				"dialogue": "you mean that article i read a few hours ago?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "it may have felt like yesterday, but i have changed much within that eternity before and my current position..."
+			}
+		]
+	},{
+		"npc": "Reginald",
+		"dialogue": [
+			{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "here, i found a new flower for you."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "i know it might not be able to replace what you had before, but i at least hope it helps."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "... is this, by chance, a flower from flora?"
+			},{
+				"npcTalking": false,
+				"expression": "curious",
+				"dialogue": "uhh, yeah?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "oh, then it shall be a perfect replacement!"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "before my fame, i had worn one of her flowers, but in the midst of popularity i had abandonned it for something more vibrant..."
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "but, along the way, i may have lost the bond that makes her flowers special, so i will now proudly display it on my hat!"
+			},{
+				"npcTalking": false,
+				"expression": "curious",
+				"dialogue": "oh yeah, almost forgot to ask, have you seen a purple sweater button anywhere?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "oh, why yes, i have!"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "was it yours, perhaps? i found it, yet didn't know who it belonged to."
+			},{
+				"npcTalking": false,
+				"expression": "neutral",
+				"dialogue": "yeah, that's mine's! could i have it?"
+			},{
+				"npcTalking": true,
+				"expression": "neutral",
+				"dialogue": "why, of course! a gift from one to another!"
+			}
+		],
+		"propertyChange": [{
+			"name": "giveFlower",
+			"value": 3
+		}]
 	}
 ]

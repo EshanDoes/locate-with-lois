@@ -10,7 +10,7 @@ var canInteract = true
 var pathToFlashlight = 0
 var giveFruit = 0
 var giveCrystal = 0
-var giveTrolphy = 0
+var giveTrophy = 0
 var giveWateringCan = 0
 var giveFlower = 0
 
@@ -26,24 +26,27 @@ func open_dialogue(index):
 	dialogue.get_dialogue(index)
 
 func renew_interact():
-	canInteract = true
-	overlay.visible = false
-	dialogue.visible = false
-	roomTransition.visible = false
+	if giveFlower >= 2:
+		$"Overlay/Win Screen".open()
+	else:
+		canInteract = true
+		overlay.visible = false
+		dialogue.visible = false
+		roomTransition.visible = false
 
-func change_room(room: PackedScene):
+func change_room(room: Node):
 	overlay.visible = true
 	roomTransition.visible = true
 	canInteract = false
 	
-	var transitionTween = get_tree().create_tween()
-	var opacityTween = get_tree().create_tween()
+	var transitionTween = create_tween()
+	var opacityTween = create_tween()
 	transitionTween.tween_property(roomTransition, "material:shader_parameter/progress", 0.0, transitionDuration)
 	opacityTween.tween_property(roomTransition, "modulate:a", 1.0, transitionDuration).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_CUBIC)
 	
 	await get_tree().create_timer(transitionDuration).timeout
 	$"/root/World".free()
-	get_tree().root.add_child(room.instantiate())
+	get_tree().root.add_child(room)
 	
 	await get_tree().create_timer(0.15).timeout
 	new_room_transition()

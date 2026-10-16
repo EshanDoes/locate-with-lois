@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bq0bn38i7nt0o"]
+
+[ext_resource type="PackedScene" uid="uid://scq32cydqhnu" path="res://scenes/camera.tscn" id="1_v61y4"]
+[ext_resource type="Texture2D" uid="uid://c6tolqdychxlk" path="res://sprites/characters/grog.png" id="2_qgqxc"]
+[ext_resource type="Texture2D" uid="uid://ba4m02wt3585k" path="res://sprites/area/cave_entrance.png" id="2_uit5i"]
+[ext_resource type="Script" uid="uid://bgkp5sqpv3s62" path="res://scripts/roomdoor.gd" id="3_npl1g"]
+[ext_resource type="Script" uid="uid://bwoxstj8q4a3b" path="res://scripts/interactable.gd" id="3_rphh8"]
+
+[node name="World" type="Control" unique_id=546284535]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera" parent="." unique_id=683167166 instance=ExtResource("1_v61y4")]
+limit_left = 0
+limit_top = 0
+limit_right = 640
+limit_bottom = 360
+
+[node name="Cave Entrance" type="TextureRect" parent="." unique_id=812956787]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 5.0
+offset_right = 391.0
+offset_bottom = 170.0
+texture = ExtResource("2_uit5i")
+script = ExtResource("3_npl1g")
+room = "uid://0o2orom7thau"
+dialogueIndex = 8
+questTiedTo = "pathToFlashlight"
+dissapearAfterInteract = null
+minimumQuestAmount = null
+
+[node name="Grog" type="TextureRect" parent="." unique_id=85064338]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 197.0
+offset_right = 363.0
+offset_bottom = 317.0
+texture = ExtResource("2_qgqxc")
+script = ExtResource("3_rphh8")
